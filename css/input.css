@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main-container {
+  width: 400px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: start;
+}
+
+.main-container .input-container {
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  height: 40px;
+}
+
+/* Input Text  */
+
+#pass-input {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  font-family: "Itim", cursive;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+#pass-input:active,
+#pass-input:focus {
+  outline-color: #a8a8eb;
+  outline-offset: 2px;
+}
+#pass-input::placeholder {
+  font-size: 1.1rem;
+  font-family: "Itim", cursive;
+}
+
+/* Toogle Eye Button  */
+
+.eye-btn {
+  position: absolute;
+  border-radius: 50%;
+  right: 15px;
+  top: 6px;
+  cursor: pointer;
+  padding: 2%;
+}
+
+.eye-btn::before {
+  content: "\f06e";
+  font-family: fontAwesome;
+  color: #555;
+}
+
+.eye-btn.hide::before {
+  content: "\f070";
+  font-family: fontAwesome;
+}
+/* Validation box  */
+
+.validator-box {
+  width: 100%;
+  background-color: #3a5e5b;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0.8;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ul-pass {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-family: "Itim", cursive;
+}
+.ul-pass li {
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.validator-box ul li::before {
+  content: "\f192";
+  font-family: fontAwesome;
+  width: 25px;
+  display: inline-flex;
+}
+
+.validator-box ul li.valid::before {
+  content: "\f00c";
+  color: #0f0;
+}
+
+.footer {
+  bottom: 50px;
+
+  position: absolute;
+  width: 100%;
+  color: white;
+}
+
+.footer-container {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 auto;
+  padding: 1%;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.copyright span {
+  letter-spacing: 0.12rem;
+}
+.copyright span span {
+  font-size: 1.4rem;
+  color: #1d2f2e;
+  font-weight: 700;
+  text-decoration: underline;
+  font-family: "Itim", cursive;
+}
+.socials {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.socials i {
+  font-size: 1.4rem;
+}
+
+.social-links {
+  color: white;
+}
+
+.social-links:hover {
+  color: #543c3e;
+}
+
+/* Media Query */
+
+@media (max-width: 35em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 29em) {
+  .main-container {
+    width: 350px;
+  }
+}
